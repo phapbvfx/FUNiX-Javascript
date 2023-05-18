@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+.box {
+  background-color: #52c47b;
+  width: 250px;
+  padding: 24px;
+}
+
+#btn-answer {
+  background-color: #e4e4e4;
+  font-size: 24px;
+  padding: 16px;
+}
+
+#btn-answer span {
+  font-size: 32px;
+  color: red;
+}
