@@ -14,7 +14,16 @@ const hanleRegister = () => {
     username.value,
     password.value
   );
+  // Valid user input
   const isValid = validateData(user);
+
+  /**
+   * if validated
+   * 1. Add user to userArr
+   * 2. Save userArr to localStorage
+   * 3. Clear Input
+   * 4. Redirect to login page
+   */
   if (isValid) {
     userArr.push(parseUser(user));
     saveToStorage(KEY, userArr);
@@ -22,7 +31,9 @@ const hanleRegister = () => {
     window.location.href = "../pages/login.html";
   }
 };
+
 btnSubmit.addEventListener("click", hanleRegister);
+
 const parseUser = (userData) => {
   const user = new User(
     userData.firstName,
@@ -33,6 +44,7 @@ const parseUser = (userData) => {
   return user;
 };
 
+// Clear input after save
 const clearInput = () => {
   firstName.value = "";
   lastName.value = "";

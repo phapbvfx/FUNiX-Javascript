@@ -8,12 +8,10 @@ const wcMsg = document.getElementById("welcome-message");
 const btnLogout = document.getElementById("btn-logout");
 
 const initPage = function () {
-  console.log("hello init");
-  console.log(currentUser);
-  console.log(isLogin(currentUser));
+  // Check user isLogin and display html
   if (!isLogin(currentUser)) {
     mainContent.classList.remove("d-none");
-    wcMsg.textContent = currentUser.username;
+    wcMsg.textContent = `Welcome, ${currentUser.firstName}`;
     loginModal.classList.add("d-none");
   } else {
     mainContent.classList.add("d-none");

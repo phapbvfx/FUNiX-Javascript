@@ -9,9 +9,6 @@ const currentUserTodo = function () {
   return todoArr.filter((todo) => todo.owner === currentUser.username);
 };
 
-// handle submit add todo
-btnAdd.addEventListener("click", addTodo);
-
 // Add todo function
 const addTodo = function () {
   if (validateTodo(inputTask.value)) {
@@ -22,6 +19,9 @@ const addTodo = function () {
     inputTask.value = "";
   }
 };
+
+// handle submit add todo
+btnAdd.addEventListener("click", addTodo);
 
 // Validate todo
 const validateTodo = function (todo) {

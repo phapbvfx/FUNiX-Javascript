@@ -13,6 +13,7 @@ const init = async function () {
 
   const initScreen = async function (page) {
     try {
+      // fetch API
       const res = await User.fetchData(
         "us",
         userSetting.category,
@@ -20,7 +21,7 @@ const init = async function () {
         page
       );
 
-      totalPage = res.totalResults / 5;
+      totalPage = Math.ceil(res.totalResults / userSetting.pageSize);
 
       //Render articles to screen
       container.innerHTML = res.articles
