@@ -1,14 +1,9 @@
 "use strict";
-// const score0El = document.getElementById("score--0");
-// const score1El = document.getElementById("score--1");
-// const scores = [score0El, score1El];
+
 const scores = document.querySelectorAll(".score");
 
 const diceEl = document.querySelector(".dice");
 
-// const current0El = document.querySelector("#current--0");
-// const current1El = document.querySelector("#current--1");
-// const currents = [current0El, current1El];
 const currents = document.querySelectorAll(".current-score");
 
 const btnNew = document.querySelector(".btn.btn--new");
