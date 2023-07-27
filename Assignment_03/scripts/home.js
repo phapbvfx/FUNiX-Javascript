@@ -19,7 +19,7 @@ const initPage = function () {
   }
   btnLogout.addEventListener("click", () => {
     removeItem(CURRENT_USER);
-    window.location.href = "../pages/login.html";
+    window.location.href = "./pages/login.html";
   });
 };
 
